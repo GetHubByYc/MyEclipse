@@ -21,6 +21,7 @@
 	<%
 		PrintWriter outPrintWriter = response.getWriter();
 		String info = (String) request.getAttribute("info");
+		String av = (String) request.getAttribute("av");
 		if (info != null) {
 			outPrintWriter.println(info);
 		}
@@ -37,7 +38,12 @@
 			<tr>
 				<td align="right" width="30%">Avatar: </td>
 				<td>
+					<%if( av!=null){
+					%>
+					<img src="<%=av %>">
+					<%}else{ %>
 					<img src="<%=user.getPhoho() %>">
+					<%} %>
 				</td>
 			</tr>
 			<tr>

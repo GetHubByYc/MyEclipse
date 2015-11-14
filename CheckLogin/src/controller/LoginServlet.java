@@ -32,9 +32,10 @@ public class LoginServlet extends HttpServlet {
 		User user = userDao.login(username, pwd);
 		if(user !=null){
 			request.getSession().setAttribute("user", user);
+			request.setAttribute("av", "../"+user.getPhoho());
 			request.getSession().setMaxInactiveInterval(60);
-			//response.sendRedirect("../message.jsp");
-			//	request.getRequestDispatcher("../message.jsp").forward(request, response);
+			//response.sendRedirect("fmessage.jsp");
+		  request.getRequestDispatcher("../message.jsp").forward(request, response);
 		}else{
 			request.setAttribute("info", "error: username or password if wrong");
 			request.getRequestDispatcher("../message.jsp").forward(request, response);

@@ -1,10 +1,11 @@
 #Tomcat publish data
-#Sat Nov 14 11:38:32 CST 2015
-org.eclipse.jst.jee.server\:jsp_sql_3=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\jsp_sql_3
+#Sat Nov 14 15:32:36 CST 2015
+org.eclipse.jst.jee.server\:ExpressionLg=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\ExpressionLg
 org.eclipse.jst.jee.server\:Goods=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\Goods
-org.eclipse.jst.jee.server\:jsp_sql=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\jsp_sql
+org.eclipse.jst.jee.server\:jsp_sql_4=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\jsp_sql_4
+org.eclipse.jst.jee.server\:jsp_sql_3=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\jsp_sql_3
 org.eclipse.jst.jee.server\:jsp_6=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\jsp_6
 org.eclipse.jst.jee.server\:jsp_5=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\jsp_5
 org.eclipse.jst.jee.server\:CheckLogin=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\CheckLogin
+org.eclipse.jst.jee.server\:jsp_sql=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\jsp_sql
 org.eclipse.jst.jee.server\:jsp_1=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\jsp_1
-org.eclipse.jst.jee.server\:jsp_sql_4=C\:\\Users\\yy292_000\\Desktop\\MyEclipse\\.metadata\\.me_tcat7\\webapps\\jsp_sql_4

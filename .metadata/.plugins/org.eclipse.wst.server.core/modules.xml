@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <modules>
-  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:CheckLogin" serverId="com.genuitec.embedded.tomcat.server.v70"/>
   <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:TestBean" serverId="com.genuitec.embedded.tomcat.server.v70"/>
-  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:HelloWorld" serverId="com.genuitec.embedded.tomcat.server.v70"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:CheckLogin" serverId="com.genuitec.embedded.tomcat.server.v70"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:ExpressionLg" serverId="com.genuitec.embedded.tomcat.server.v70"/>
   <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:Goods" serverId="com.genuitec.embedded.tomcat.server.v70"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:HelloWorld" serverId="com.genuitec.embedded.tomcat.server.v70"/>
   <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:jsp_5" serverId="com.genuitec.embedded.tomcat.server.v70"/>
-  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:jsp_6" serverId="com.genuitec.embedded.tomcat.server.v70"/>
   <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:jsp_sql_4" serverId="com.genuitec.embedded.tomcat.server.v70"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:jsp_6" serverId="com.genuitec.embedded.tomcat.server.v70"/>
   <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:jsp_sql" serverId="com.genuitec.embedded.tomcat.server.v70"/>
   <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:jsp_1" serverId="com.genuitec.embedded.tomcat.server.v70"/>
   <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:jsp_sql_3" serverId="com.genuitec.embedded.tomcat.server.v70"/>

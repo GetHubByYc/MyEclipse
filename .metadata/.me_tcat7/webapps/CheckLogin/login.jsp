@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -17,7 +17,7 @@
   </head>
   
   <body>
-   <form action="LoginServlet" method="post" onSubmit="return login(this)">
+   <form action="servlet/LoginServlet" method="post" onSubmit="return login(this)">
    		<table align="center" width="300" border="0" class="tb1">
    			<tr>
     		<td align="right">username:　</td>

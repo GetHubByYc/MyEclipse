@@ -11,6 +11,7 @@ import javax.sound.sampled.ReverbType;
 
 import model.User;
 
+@SuppressWarnings("serial")
 public class UserExitServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request,HttpServletResponse response)
 		throws ServletException,IOException{
@@ -20,6 +21,6 @@ public class UserExitServlet extends HttpServlet {
 			session.removeAttribute("user");
 			request.setAttribute("info", user.getUsername()+"exit successfully!");
 		}
-	request.getRequestDispatcher("message.jsp").forward(request, response);
+	request.getRequestDispatcher("../message.jsp").forward(request, response);
 	}
 }

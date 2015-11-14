@@ -1,6 +1,6 @@
-colorComment=125,140,147
-colorDefault=224,226,228
-colorEntity=224,226,228
-colorKeyword=147,199,99
-colorString=236,118,0
+colorComment=127,159,127
+colorDefault=226,226,226
+colorEntity=212,196,169
+colorKeyword=141,203,226
+colorString=204,147,147
 eclipse.preferences.version=1

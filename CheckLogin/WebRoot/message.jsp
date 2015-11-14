@@ -1,5 +1,5 @@
 <%@page import="java.io.PrintWriter"%>
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ page import="model.User" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -26,11 +26,37 @@
 		}
 		User user=(User)session.getAttribute("user");
 		if(user != null){
-			outPrintWriter.println("login sucessfully!");
-		}else{
-			outPrintWriter.println("login faild!");
-		}	
 	%>
-	
+		<table align="center" width="350" border="1" height="200" bordercolor="#E8F4CC">
+			<tr>
+				<td align="center" colspan="2">
+					<span style="font-weight:bold;font-size:18px><%=user.getUsername() %></span>"
+					login successfully!
+				</td>
+			</tr>
+			<tr>
+				<td align="right" width="30%">Avatar: </td>
+				<td>
+					<img src="<%=user.getPhoho() %>">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">sex: </td>
+				<td><%=user.getSex() %>
+			</tr>
+			<tr>
+				<td align="right">tel: </td>
+				<td><%=user.getTel() %></td>
+			</tr>
+			<tr>
+				<td align="right">email: </td>
+				<td><%=user.getEmail() %></td>
+			</tr>
+		</table>
+	<%
+		}else{
+			out.println("sorry,you haven't login");
+		}
+	 %>
 </body>
 </html>

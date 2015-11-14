@@ -1,0 +1,41 @@
+import java.sql.DriverManager;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+
+
+public class Goods {
+	private String name;
+	private double price;
+	private String description;
+	public String getName(){
+		return name;
+	}
+	public double getPrice(){
+		return price;
+	}
+	public String getDescrString(){
+		return description;
+	}
+	public void setName(String name){
+		this.name = name;
+	}
+	public void setPrice(double price){
+		this.price = price;
+	}
+	public void setDescription(String description){
+		this.description = description;
+	}
+	public void SaveGoods(){
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/java";
+			Connection conn = (Connection) DriverManager.getConnection(url,"java","yy19931001");
+			String create_tb = "CREATE TABLE IF NOT EXISTS  tb_goods(name varchar(20),price double,description varchar(50));";
+			PreparedStatement pstmt = (PreparedStatement) conn.prepareStatement(create_tb);		
+			pstmt.executeUpdate();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

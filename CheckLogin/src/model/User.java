@@ -1,0 +1,48 @@
+package model;
+
+public class User {
+	private int id;
+	private String username,pwd,sex,tel,photo,email;
+	public void setId(int id){
+		this.id = id;
+	}
+	public void setUsername(String username){
+		this.username = username;
+	}
+	public void setPwd(String pwd){
+		this.pwd = pwd;
+	}
+	public void setTel(String tel){
+		this.tel = tel;
+	}
+	public void setSex(String sex){
+		this.sex = sex;
+	}
+	public void setPhoto(String photo){
+		this.photo = photo;
+	}
+	public void setEmail(String email){
+		this.email = email;
+	}
+	public int getId(){
+		return id;
+	}
+	public String getUsername(){
+		return username;
+	}
+	public String getPwd(){
+		return pwd;
+	}
+	public String getSex(){
+		return sex;
+	}
+	public String getTel(){
+		return tel;
+	}
+	public String getPhoho(){
+		return photo;
+	}
+	public String getEmail(){
+		return email;
+	}
+}

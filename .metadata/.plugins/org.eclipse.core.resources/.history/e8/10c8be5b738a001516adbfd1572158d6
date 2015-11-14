@@ -1,0 +1,77 @@
+package model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class UserDao {
+	public boolean userExist(String username){
+		Connection conn = DataBaseUtil.getConnection();
+		String sql = "select * from user_tb where username=?";
+		try{
+			PreparedStatement pstm = conn.prepareStatement(sql);
+			ResultSet rs = pstm.executeQuery();
+			if(!rs.next()){
+				return true;
+			}
+			rs.close();
+			pstm.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			DataBaseUtil.closeConnection(conn);
+		}
+		return false;
+	}
+	
+	public void saveUser(User user){
+		Connection conn = DataBaseUtil.getConnection();
+		String sql = "insert into user_tb(username,pwd,sex,tel,photo,email)values(?,?,?,?,?,?)";
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1,user.getUsername());
+			ps.setString(2, user.getPwd());
+			ps.setString(3, user.getSex());
+			ps.setString(4, user.getTel());
+			ps.setString(5, user.getPhoho());
+			ps.setString(6, user.getEmail());
+			ps.executeUpdate();
+			ps.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally{
+			DataBaseUtil.closeConnection(conn);
+		}
+	}
+	
+	public User login(String username,String pwd){
+		User user = null;
+		Connection conn = DataBaseUtil.getConnection();
+		String sql="select * from user_tb where username=? and pwd=?";
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, username);
+			ps.setString(2, pwd);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()){
+				user = new User();
+				user.setId(rs.getInt("id"));
+				user.setUsername(rs.getString("username"));
+				user.setPwd(rs.getString("pwd"));
+				user.setSex(rs.getString("sex"));
+				user.setPhoto(rs.getString("photo"));
+				user.setEmail(rs.getString("email"));
+			}
+			rs.close();
+			ps.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally{
+			DataBaseUtil.closeConnection(conn);
+		}
+		return user;
+	}
+}

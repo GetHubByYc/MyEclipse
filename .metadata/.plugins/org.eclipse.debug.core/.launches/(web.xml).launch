@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jet.jet2Transformation">
+<stringAttribute key="org.eclipse.jet.id" value=""/>
+<intAttribute key="org.eclipse.jet.logFilterLevel" value="3"/>
+<stringAttribute key="org.eclipse.jet.source" value="/jsp_1/WebRoot/WEB-INF/web.xml"/>
+</launchConfiguration>

@@ -1,0 +1,21 @@
+import java.sql.DriverManager;
+
+import org.apache.jasper.tagplugins.jstl.core.Catch;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.Statement;
+
+
+public class SaveGoods {
+	try{
+		Class.forName("com.mysql.jdbc.Driver");
+		String url = "jdbc:mysql://localhost:3306/java";
+		Connection conn = (Connection) DriverManager.getConnection(url,"java","yy19931001");
+		String create_tb = "create table tb_goods(name varchar(20),price double,description varchar(50));";
+		PreparedStatement pstmt = conn.prepareStatement(sql);		
+		
+	}Catch(Exception e){
+		e.printStackTrace();
+	}
+}

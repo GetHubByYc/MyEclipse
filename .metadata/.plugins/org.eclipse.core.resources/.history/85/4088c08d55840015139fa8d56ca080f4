@@ -1,0 +1,89 @@
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Enumeration;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTree;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreePath;
+import javax.swing.tree.TreeSelectionModel;
+
+import org.omg.CORBA.PUBLIC_MEMBER;
+
+public class Swing_Tree extends JFrame implements ActionListener {
+	private Enumeration enum_tree;
+	JButton btn_pre = new JButton("pre_order");
+	JButton btn_pst = new JButton("pst_order");
+	JButton btn_brh = new JButton("brh_order");
+	JButton btn_dep = new JButton("dep_order");
+	DefaultMutableTreeNode root = new DefaultMutableTreeNode("root");
+	Container ct = getContentPane();
+	public Swing_Tree() {
+		btn_pre.addActionListener(this);
+		btn_pst.addActionListener(this);
+		btn_brh.addActionListener(this);
+		btn_dep.addActionListener(this);
+		DefaultMutableTreeNode nodeFrist = new DefaultMutableTreeNode(
+				"first node A");
+		root.add(nodeFrist);
+
+		DefaultMutableTreeNode nodeSecond = new DefaultMutableTreeNode(
+				"second node", false);
+		nodeFrist.add(nodeSecond);
+		root.add(new DefaultMutableTreeNode("first node B"));
+		JTree treeRootJTree = new JTree(root);
+		ct.add(treeRootJTree, BorderLayout.WEST);
+		ct.add(btn_pre,BorderLayout.CENTER);
+		ct.add(btn_pst,BorderLayout.CENTER);
+		setSize(300, 300);
+		setVisible(true);
+
+		TreeSelectionModel treeSelectionModel = treeRootJTree
+				.getSelectionModel();
+		treeSelectionModel
+				.setSelectionMode(TreeSelectionModel.CONTIGUOUS_TREE_SELECTION);
+		treeRootJTree.addTreeSelectionListener(new TreeSelectionListener() {
+
+			@Override
+			public void valueChanged(TreeSelectionEvent e) {
+				TreePath[] selectionPaths = treeRootJTree.getSelectionPaths();
+				// TODO Auto-generated method stub
+				if (!treeRootJTree.isSelectionEmpty()) {
+					for (int i = 0; i < selectionPaths.length; i++) {
+						TreePath tp = selectionPaths[i];
+						Object[] path = tp.getPath();
+						for (int j = 0; j < path.length; j++) {
+							DefaultMutableTreeNode node = (DefaultMutableTreeNode) path[j];
+							System.out.print(node.getUserObject()
+									+ (j == (path.length - 1) ? "" : "-->"));
+						}
+						System.out.println();
+					}
+					System.out.println();
+				}
+			}
+		});
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Swing_Tree();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if (e.getSource().equals(btn_pre)) {
+			
+		}
+	}
+
+}

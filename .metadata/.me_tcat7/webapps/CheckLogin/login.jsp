@@ -1,0 +1,39 @@
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>My JSP 'login.jsp' starting page</title>
+
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+
+  </head>
+  
+  <body>
+   <form action="LoginServlet" method="post" onSubmit="return login(this)">
+   		<table align="center" width="300" border="0" class="tb1">
+   			<tr>
+    		<td align="right">username:　</td>
+    		<td><input type="text" name="username" ></td>
+    	</tr>
+    	<tr>
+    		<td align="right">password:　</td>
+    		<td><input type="text" name="pwd" ></td>
+    	</tr>
+    	<tr>
+    		<td clospan="2" align="center" height="50">
+    			<input type="submit" value="login">
+    			<input type="reset" value="reset">
+    		</td>
+    	</tr>
+   		</table>
+   </form>
+  </body>
+</html>
